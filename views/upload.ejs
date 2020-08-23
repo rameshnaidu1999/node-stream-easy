@@ -1,0 +1,49 @@
+<%- include ("layouts/header") %>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-lg-6 col-md-11 col-sm-11 mx-auto">
+                <h1>Upload Video</h1>
+               
+                <form method="post" action="/upload-video" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Select Video</label>
+                        <input class="form-control-file" type="file" name="video" 
+                            accept="video/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Thumbnail</label>
+                        <input class="form-control-file" type="file" name="thumbnail" 
+                            accept="image/*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label >Title</label>
+                        <input class="form-control" type="text" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label >Description</label>
+                        <textarea class="form-control" type="text" name="description" required>
+
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label >Tags</label>
+                        <input class="form-control" type="text" name="tags" required>
+                    </div>
+                    <div class="form-group">
+                        <label >Category</label>
+                        <select name="category" class="form-control">
+                            <option value="Technology">Technology</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="Education">Education</option>
+                            <option value="Funny">Funny</option>
+                        </select>
+                    </div>
+                    <input class="btn btn-primary btn-block" type="submit" value="Upload">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<%- include ("layouts/footer") %>
